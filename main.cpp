@@ -19,6 +19,7 @@ int main() {
     srand(time(0));
     bool again;
 
+    list<Goat> trip;
     // read & populate arrays for names and colors
     ifstream fin("names.txt");
     string names[SZ_NAMES];
@@ -35,16 +36,19 @@ int main() {
         int choice = main_menu();
 
         if (choice == 1) {
-            add_goat();
+            add_goat(trip, names, colors);
         }
         else if (choice == 2) {
-
+            delete_goat(trip);
         }
         else if (choice == 3) {
+            display_trip(trip);
 
         }
         else if (choice == 4) {
-            
+            cout << "Quitting program" << endl;
+            break;
+
         }
 
     }
