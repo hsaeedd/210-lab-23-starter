@@ -31,6 +31,24 @@ int main() {
     while (fin1 >> colors[i++]);
     fin1.close();
 
+    while(true) {
+        int choice = main_menu();
+
+        if (choice == 1) {
+            add_goat();
+        }
+        else if (choice == 2) {
+
+        }
+        else if (choice == 3) {
+
+        }
+        else if (choice == 4) {
+            
+        }
+
+    }
+
 
 
 
