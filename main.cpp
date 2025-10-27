@@ -104,5 +104,12 @@ void add_goat(list<Goat> &trip, string names[], string colors[]) {
     trip.push_back(Goat(names[name], age, colors[color]));
 }
 void display_trip(list<Goat> trip) {
-
+    if(trip.empty()) {
+        return;
+    }
+    int i = 1;
+    for (auto it = trip.begin(); it != trip.end(); ++it) {
+        cout << "[" << i << "]" << it->get_name() << "(" << it->get_age() << ", " << it->get_color() << ")" << endl;
+    }
+    i++;
 }
