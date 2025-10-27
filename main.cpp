@@ -89,7 +89,7 @@ void delete_goat(list<Goat> &trip) {
     for(auto it = trip.begin(); it != trip.end(); ++it) {
         if(i ==c) {
             trip.erase(it);
-            break
+            break;
         }
         i++;
         
