@@ -69,7 +69,24 @@ int main_menu() {
     cout << "[4] Quit" << endl;
     cout << "Choice -->";
     cin >> choice;
-    
+
     return choice;
+
+}
+int select_goat(list<Goat> trip);
+void delete_goat(list<Goat> &trip) {
+    
+}
+void add_goat(list<Goat> &trip, string names[], string colors[]) {
+    int name = rand() % SZ_NAMES;
+    int age = rand() % (MAX_AGE + 1);
+    int color = rand() % SZ_COLORS;
+
+    trip.push_back(Goat(names[name], age, colors[color]));
+}
+void display_trip(list<Goat> trip) {
+    if(trip.empty()) {
+        return;
+    }
 
 }
