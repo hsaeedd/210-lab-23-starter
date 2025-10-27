@@ -69,8 +69,7 @@ int main_menu() {
     cout << "[4] Quit" << endl;
     cout << "Choice -->";
     cin >> choice;
-
-
-
+    
+    return choice;
 
 }
