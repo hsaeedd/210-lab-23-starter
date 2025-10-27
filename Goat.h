@@ -18,7 +18,7 @@ public:
     Goat(string n, int a)
         {name = n; age = a; }
     Goat(string n, int a, string c)
-        {name = n; age = a; color = c}
+        {name = n; age = a; color = c; }
 
 
     // setters and getters
