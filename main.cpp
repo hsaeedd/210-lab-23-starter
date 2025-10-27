@@ -110,6 +110,7 @@ void display_trip(list<Goat> trip) {
     int i = 1;
     for (auto it = trip.begin(); it != trip.end(); ++it) {
         cout << "[" << i << "]" << it->get_name() << "(" << it->get_age() << ", " << it->get_color() << ")" << endl;
+        i++;
     }
-    i++;
+   
 }
