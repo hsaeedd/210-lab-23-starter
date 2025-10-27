@@ -73,9 +73,28 @@ int main_menu() {
     return choice;
 
 }
-int select_goat(list<Goat> trip);
+
 void delete_goat(list<Goat> &trip) {
-    
+    if(trip.empty()) {
+        return;
+    }
+    display_trip(trip);
+
+    int c;
+    cout << "Which goat do you want to delete? ";
+    cin >> c;
+
+    int i = 1;
+
+    for(auto it = trip.begin(); it != trip.end(); ++it) {
+        if(i ==c) {
+            trip.erase(it);
+            break
+        }
+        i++;
+        
+    }
+
 }
 void add_goat(list<Goat> &trip, string names[], string colors[]) {
     int name = rand() % SZ_NAMES;
@@ -85,8 +104,5 @@ void add_goat(list<Goat> &trip, string names[], string colors[]) {
     trip.push_back(Goat(names[name], age, colors[color]));
 }
 void display_trip(list<Goat> trip) {
-    if(trip.empty()) {
-        return;
-    }
 
 }
